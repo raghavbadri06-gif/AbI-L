@@ -12,7 +12,9 @@ Official PyTorch implementation of **Abnormality Intensity Representation Learni
 
 Severity-based medical image analysis requires representations that encode disease progression, yet deep networks optimise class separation, yielding latent spaces that may poorly reflect abnormality severity. This paper presents **AbI-L**, a backbone-adaptive representation learning framework that structures the latent space through five abnormality intensity descriptors: **concentration (AIC)**, **entropy (AIE)**, **local variation (AIV)**, **contrast (AICo)**, and **dispersion (AID)**. These descriptors are fused via descriptor-guided gating and optimised using an **Intensity Progression Loss** that explicitly enforces the severity sequence (μ_Normal < μ_HeelSpur < μ_Sever) on the latent class means.
 
-AbI-L is evaluated on a three-class heel spur diagnosis task across **GhostNet**, **MobileNetV3-Large**, and **EfficientNet-B0**. Although classification accuracy remains competitive, AbI-L consistently yields more discriminative, compact, and progression-ordered latent representations, improves Quadratic Weighted Kappa (QWK) on capable backbones, enlarges centroid distances between clinically distinct grades, and produces sharper Grad-CAM attention. Statistical validation using bootstrap confidence intervals, Kruskal-Wallis analysis, and Bonferroni-corrected post-hoc comparisons confirms the framework's robustness. AbI-L operates purely on the latent space, making it adaptable to any CNN backbone.
+AbI-L is evaluated on a three-class heel spur diagnosis task across **GhostNet**, **MobileNetV3-Large**, and **EfficientNet-B0**. Although classification accuracy remains competitive, AbI-L consistently yields more discriminative, compact, and progression-ordered latent representations, improves Quadratic Weighted Kappa (QWK) on capable backbones, enlarges centroid distances between clinically distinct grades, and produces sharper Grad-CAM attention. Statistical validation using bootstrap confidence intervals, Kruskal-Wallis analysis, and Bonferroni-corrected post-hoc comparisons confirms the framework's robustness. AbI-L operates purely on the latent space, making it adaptable to any CNN backbone. 
+
+Please note that the intensity progression loss is designed in a way where it learns labels in an alphabetical order (Normal :A, Heelspur : B, Sever: C)
 
 **Keywords:** Deep Learning, Representation Learning, Disease Progression, Severity Grading, Heel Spur Diagnosis, Latent Space Structuring, Progression-Aware Loss, Grad-CAM Explainability.
 
@@ -331,3 +333,5 @@ seaborn>=0.12.0
 umap-learn>=0.5.0
 thop>=0.1.0
 Pillow>=9.5.0
+
+For reproducing: " The entire progress with the specified process took around 84 hours (approximately 3.5 days), So Kindly look into the configuration. 
