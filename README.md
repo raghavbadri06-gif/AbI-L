@@ -159,23 +159,22 @@ The dataset should be organized as:
 text
 data/
 ├── train/
-│   ├── normal/
+│   ├──A (normal class)/
 │   │   ├── img_001.jpg
 │   │   └── ...
-│   ├── heelspur/
+│   ├── B (heelspur)/
 │   │   ├── img_001.jpg
 │   │   └── ...
-│   └── sever/
+│   └── C (Sever)/
 │       ├── img_001.jpg
 │       └── ...
 ├── val/
-│   ├── normal/
-│   ├── heelspur/
-│   └── sever/
+│   ├── similar to train/
+│   
+│  
 └── test/
-    ├── normal/
-    ├── heelspur/
-    └── sever/
+    ├── similar to train/
+
 Dataset Source: Kaggle Heel Dataset
 
 Dataset Statistics:
