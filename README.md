@@ -14,7 +14,6 @@ Severity-based medical image analysis requires representations that encode disea
 
 AbI-L is evaluated on a three-class heel spur diagnosis task across **GhostNet**, **MobileNetV3-Large**, and **EfficientNet-B0**. Although classification accuracy remains competitive, AbI-L consistently yields more discriminative, compact, and progression-ordered latent representations, improves Quadratic Weighted Kappa (QWK) on capable backbones, enlarges centroid distances between clinically distinct grades, and produces sharper Grad-CAM attention. Statistical validation using bootstrap confidence intervals, Kruskal-Wallis analysis, and Bonferroni-corrected post-hoc comparisons confirms the framework's robustness. AbI-L operates purely on the latent space, making it adaptable to any CNN backbone. 
 
-Please note that the intensity progression loss is designed in a way where it learns labels in an alphabetical order (Normal :A, Heelspur : B, Sever: C)
 
 **Keywords:** Deep Learning, Representation Learning, Disease Progression, Severity Grading, Heel Spur Diagnosis, Latent Space Structuring, Progression-Aware Loss, Grad-CAM Explainability.
 
@@ -159,13 +158,13 @@ The dataset should be organized as:
 text
 data/
 ├── train/
-│   ├──A (normal class)/
+│   ├──normal class/
 │   │   ├── img_001.jpg
 │   │   └── ...
-│   ├── B (heelspur)/
+│   ├── heelspur/
 │   │   ├── img_001.jpg
 │   │   └── ...
-│   └── C (Sever)/
+│   └── Sever/
 │       ├── img_001.jpg
 │       └── ...
 ├── val/
